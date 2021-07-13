@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <ImageView
+        android:id="@+id/im1"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginTop="-35dp"
+        android:background="#e61ae6"
+        android:src="@drawable/top2" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    更新于 2021-07-13 20:08:22"
+        android:layout_marginTop="80dp"
+        android:background="#07131f"
+        android:textColor="#fff"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_marginTop="99dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#07131f">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
