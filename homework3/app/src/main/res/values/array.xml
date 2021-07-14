@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="scene_icon_list">
+        <item>p1</item>
+        <item>p2</item>
+        <item>p3</item>
+        <item>p4</item>
+        <item>p5</item>
+        <item>p6</item>
+        <item>p7</item>
+        <item>p8</item>
+        <item>p9</item>
+        <item>p10</item>
+        <item>p11</item>
+        <item>p12</item>
+    </string-array>
+</resources>
