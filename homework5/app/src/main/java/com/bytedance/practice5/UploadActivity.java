@@ -184,63 +184,7 @@ public class UploadActivity extends AppCompatActivity {
 
     // TODO 7 选做 用URLConnection的方式实现提交
     private void submitMessageWithURLConnection(){
-        byte[] coverImageData = readDataFromUri(coverImageUri);
-        if (coverImageData == null || coverImageData.length == 0) {
-            Toast.makeText(this, "封面不存在", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        String to = toEditText.getText().toString();
-        if (TextUtils.isEmpty(to)) {
-            Toast.makeText(this, "请输入TA的名字", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        String content = contentEditText.getText().toString();
-        if (TextUtils.isEmpty(content)) {
-            Toast.makeText(this, "请输入想要对TA说的话", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if ( coverImageData.length >= MAX_FILE_SIZE) {
-            Toast.makeText(this, "文件过大", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-
-        String urlStr = String.format(Constants.BASE_URL + "messages?student_id=%s&extra_value=%s", Constants.STUDENT_ID,"");
-        Log.d(TAG, "getData: " + urlStr);
-        try{
-            Upload uploadBody = new Upload();
-            uploadBody.setFrom(Constants.USER_NAME);
-            uploadBody.setTo(to);
-            uploadBody.setContent(content);
-            MultipartBody.Part imageBody = MultipartBody.Part.createFormData("image", "cover.png", RequestBody.create(MediaType.parse("multipart/form-data"), coverImageData));
-            uploadBody.setImage(imageBody);
-
-            byte[] body = new Gson().toJson(uploadBody).getBytes();
-
-            URL url = new URL(urlStr);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setConnectTimeout(6000);
-            conn.setRequestMethod("POST");
-            conn.setRequestProperty("accept", "application/json");
-            conn.setRequestProperty("token", Constants.token);
-
-            conn.getOutputStream().write(body);
-            conn.getOutputStream().flush();
-            Log.d("123","ittrue");
-            if (conn.getResponseCode() == 200) {
-                Log.d("123","true");
-                finish();
-            }
-            else {
-                Log.i("getData","it's empty: " + conn.getResponseCode());
-            }
-
-            conn.disconnect();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        
     }
 
 
