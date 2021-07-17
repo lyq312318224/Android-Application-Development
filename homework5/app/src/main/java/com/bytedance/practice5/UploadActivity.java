@@ -184,7 +184,7 @@ public class UploadActivity extends AppCompatActivity {
 
     // TODO 7 选做 用URLConnection的方式实现提交
     private void submitMessageWithURLConnection(){
-        
+            
     }
 
 
