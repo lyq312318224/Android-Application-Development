@@ -26,4 +26,14 @@
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/btn2"/>
 
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="124dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="432dp"
+        android:text="视频(系统自带播放器)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,7 +53,12 @@ public class VideoActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video);
+        if (getApplicationContext().getResources().getConfiguration().orientation== Configuration.ORIENTATION_PORTRAIT){
+            setContentView(R.layout.activity_video);
+        }
+        else{
+            setContentView(R.layout.full_screen);
+        }
         VideoView video=findViewById(R.id.video);
         video.setMediaController(new MediaController(this));
         initView();
