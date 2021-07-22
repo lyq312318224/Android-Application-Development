@@ -1,0 +1,24 @@
+<!-- drawable/icon_av_vid.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="18dp"
+    android:height="12dp"
+    android:viewportWidth="18"
+    android:viewportHeight="12"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M0 0H18V12H0V0Z"
+            />
+
+        <path
+            android:pathData="M0 0V12H18V0"
+            android:fillColor="#A0AAC0"
+            />
+
+    </group>
+
+</vector>

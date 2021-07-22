@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff2f2f2"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/test_parent_play"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="@color/black">
+
+        <SurfaceView
+            android:id="@+id/test_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:onClick="onClick"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sb_main_bar"
+            android:layout_alignParentBottom="true"
+            /><!-- 进度条-->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"
+            android:onClick="onClick"
+            android:id="@+id/imagebutton"
+            android:layout_centerInParent="true"
+            /><!-- 按钮-->
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/test_btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="提交" />
+    <TextView
+        android:id="@+id/filesize"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="right|center"
+        android:layout_marginRight="110dp"
+        android:text="文件大小："/>
+
+
+</LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewsel"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBarsel"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="278dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerviewsel"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerviewsel"
+            app:layout_constraintStart_toStartOf="@+id/recyclerviewsel"
+            app:layout_constraintTop_toTopOf="@+id/recyclerviewsel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
