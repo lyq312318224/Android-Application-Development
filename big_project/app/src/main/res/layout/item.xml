@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
             android:id="@+id/p1"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
              />
         <TextView
             app:layout_constraintTop_toBottomOf="@+id/p1"

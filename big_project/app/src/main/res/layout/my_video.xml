@@ -13,37 +13,11 @@
     android:background="#fff2f2f2">
 
 
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#ededed"
-        >
-
-        <EditText
-            android:id="@+id/searchbar"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/button_circle_shape"
-            android:hint="搜索"
-            />
-
-        <ImageView
-            android:id="@+id/imgsearch"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="right|center"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/search" />
-    </FrameLayout>
-
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
         android:layout_marginBottom="90dp"
         android:background="#fff2f2f2">
 
@@ -55,9 +29,9 @@
         android:layout_gravity="bottom">
         <ImageView
             android:id="@+id/homebtn"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:src="@drawable/submitlocal"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/p3"
             android:layout_gravity="left|bottom"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="30dp"
@@ -66,8 +40,8 @@
 
         <ImageView
             android:id="@+id/playbtn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center|bottom"
             android:src="@drawable/p1"
             android:onClick="record"
@@ -76,8 +50,8 @@
             />
         <ImageView
             android:id="@+id/personalbtn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/p2"
             android:layout_gravity="right|bottom"
             android:layout_marginBottom="5dp"

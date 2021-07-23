@@ -1,13 +1,17 @@
 package com.example.bigproject;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Context;
 
+import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,11 +20,6 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.bigproject.model.VideoReturnMessage;
-
-import java.lang.reflect.Field;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
@@ -92,7 +91,7 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
             tvIndex.setText(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(data.getCreatedAt()));
             tvTitle.setText(data.getUsername());
             tvTitle.setTextColor(Color.parseColor("#000000"));
-            Glide.with(mcontext).load(data.getImageUrl()).transition(new DrawableTransitionOptions().crossFade()).apply(RequestOptions.bitmapTransform(new RoundedCorners(100))).into(imageView);
+            Glide.with(mcontext).load(data.getImageUrl()).placeholder(R.drawable.load1).transition(new DrawableTransitionOptions().crossFade()).into(imageView);
 //            imageView.setImageResource(getResourceId(data.getImageUrl()));
         }
 

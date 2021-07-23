@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -62,7 +63,6 @@ public class selectfromfileActivity extends AppCompatActivity {
     private MediaPlayer mMediaPlayer;
     private SurfaceHolder mHolder;
     private Intent intent;
-
     private void initProgressDialog() {
         progressDialog = new ProgressDialog(selectfromfileActivity.this);
         progressDialog.setIndeterminate(false);//循环滚动
@@ -133,7 +133,6 @@ public class selectfromfileActivity extends AppCompatActivity {
         mHolder = mSurfaceView.getHolder();
         mHolder.setKeepScreenOn(true);
 
-
         mHolder.addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
@@ -197,7 +196,7 @@ public class selectfromfileActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        mMediaPlayer.setLooping(true);
+        mMediaPlayer.setLooping(false);
         // 把视频画面输出到SurfaceView
         mMediaPlayer.setDisplay(mHolder);
         // 通过异步的方式装载媒体资源
@@ -287,4 +286,9 @@ public class selectfromfileActivity extends AppCompatActivity {
     }
 
 
+    public void onClick(View view) {
+        if (view.getId() == R.id.test_surfaceView) {
+            play();
+        }
+    }
 }

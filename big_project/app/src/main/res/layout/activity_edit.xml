@@ -37,26 +37,6 @@
             android:layout_centerInParent="true"
             /><!-- 按钮-->
     </RelativeLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/test_btn_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:text="提交" />
-    <TextView
-        android:id="@+id/filesize"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="right|center"
-        android:layout_marginRight="110dp"
-        android:text="文件大小："/>
-
-
-</LinearLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,6 +65,39 @@
             app:layout_constraintTop_toTopOf="@+id/recyclerviewsel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/filesize"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:text="文件大小：" />
+        <Button
+            android:id="@+id/test_btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="提交" />
+
+        <Button
+            android:id="@+id/zip_video_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="压缩" />
+
+
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

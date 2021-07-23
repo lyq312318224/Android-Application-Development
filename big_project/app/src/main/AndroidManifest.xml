@@ -23,8 +23,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".selectfromfileActivity"></activity>
         <activity android:name=".EditActivity" />
-        <activity android:name=".RecordActivity" />
         <activity android:name=".VideoPlayActivity" />
+        <activity android:name=".zipvideo"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

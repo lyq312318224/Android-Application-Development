@@ -45,15 +45,15 @@ public class CustomRoundAngleImageView extends AppCompatImageView {
         if (width >= 12 && height > 12) {
             Path path = new Path();
             //四个圆角
-            path.moveTo(12, 0);
-            path.lineTo(width - 12, 0);
-            path.quadTo(width, 0, width, 12);
-            path.lineTo(width, height - 12);
-            path.quadTo(width, height, width - 12, height);
-            path.lineTo(12, height);
-            path.quadTo(0, height, 0, height - 12);
-            path.lineTo(0, 12);
-            path.quadTo(0, 0, 12, 0);
+            path.moveTo(30, 0);
+            path.lineTo(width - 30, 0);
+            path.quadTo(width, 0, width, 30);
+            path.lineTo(width, height - 30);
+            path.quadTo(width, height, width - 30, height);
+            path.lineTo(30, height);
+            path.quadTo(0, height, 0, height - 30);
+            path.lineTo(0, 30);
+            path.quadTo(0, 0, 30, 0);
 
             canvas.clipPath(path);
         }
