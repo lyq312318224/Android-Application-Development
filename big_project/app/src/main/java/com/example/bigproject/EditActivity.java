@@ -127,6 +127,9 @@ public class EditActivity extends AppCompatActivity implements View.OnClickListe
         initProgressDialog_zip();
         intent = getIntent();
         state = intent.getIntExtra("state", 0);
+        if(state==1){
+            findViewById(R.id.zip_video_btn).setVisibility(View.INVISIBLE);
+        }
         Log.d(TAG, "onCreate: %%%%" + intent.getStringExtra("URI"));
         videoUri = FileProvider.getUriForFile(this, "com.example.bigproject.fileprovider", new File(intent.getStringExtra("URI")));
         String inputpath = intent.getStringExtra("URI");
